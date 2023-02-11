@@ -35,9 +35,34 @@ namespace Tarea2
             double num3 = Convert.ToDouble(Nota3TextBox.Text);
             double num4 = Convert.ToDouble(Nota4TextBox.Text);
 
+            if (num1 >100)
+            {
+                errorProvider1.SetError(Nota1TextBox, "Ingrese un valor entre 0 a 100 ");
+                return;
+            }
+            errorProvider1.Clear();
+            if (num2 > 100)
+            {
+                errorProvider1.SetError(Nota2TextBox, "Ingrese un valor entre 0 a 100 ");
+                return;
+            }
+            errorProvider1.Clear();
+            if (num3 > 100)
+            {
+                errorProvider1.SetError(Nota3TextBox, "Ingrese un valor entre 0 a 100 ");
+                return;
+            }
+            errorProvider1.Clear();
+            if (num4 > 100)
+            {
+                errorProvider1.SetError(Nota4TextBox, "Ingrese un valor entre 0 a 100 ");
+                return;
+            }
+            errorProvider1.Clear();
+
             double resultado = await CalcularPromedioAsync(num1, num2, num3, num4);
 
-            MessageBox.Show($"Su Promedio Final en la clase es: {resultado}");
+            MessageBox.Show($"Su Promedio Final en la Clase es: {resultado}");
 
             Nota1TextBox.Clear();
             Nota2TextBox.Clear();

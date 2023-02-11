@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.Nota1TextBox = new System.Windows.Forms.TextBox();
             this.Nota2TextBox = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.CalcularAsyncButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,6 +127,10 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Ingrese las notas";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Ejercicio
             // 
             this.AcceptButton = this.CalcularAsyncButton;
@@ -143,6 +150,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Ejercicio";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,6 +168,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button CalcularAsyncButton;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
