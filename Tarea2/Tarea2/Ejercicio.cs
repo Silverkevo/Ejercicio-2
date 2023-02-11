@@ -19,11 +19,12 @@ namespace Tarea2
 
         private async Task<double> CalcularPromedioAsync(double n1 ,double n2, double n3 , double n4)
         {
+            
             double Promedio = await Task.Run(() =>
             {
-                return n1 + n2 + n3 + n4 / 4; 
+                return n1 + n2 + n3 + n4 ; 
             });
-            return Promedio;
+            return Promedio / 4;
         }
 
 
